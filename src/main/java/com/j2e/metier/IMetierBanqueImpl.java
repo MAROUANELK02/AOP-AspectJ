@@ -20,10 +20,7 @@ public class IMetierBanqueImpl implements IMetierBanque {
     @Override
     public void retirer(Long code, double mt) {
         Compte cp=comptes.get(code);
-        if(cp.getSolde() < mt)
-            System.out.println("Solde insuffisant");
-        else
-            cp.setSolde(cp.getSolde()-mt);
+        cp.setSolde(cp.getSolde()-mt);
     }
 
     @Override
